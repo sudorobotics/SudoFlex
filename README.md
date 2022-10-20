@@ -1,1 +1,1 @@
-# SudoFlex
+# SudoFlex Digital Control Board
