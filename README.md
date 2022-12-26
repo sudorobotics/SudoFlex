@@ -65,9 +65,32 @@ BITNOT
 
 For a detailed reference information about SFB1 you can refer to the user manual in pdf format. Latest user manual can be found under **Releases** section.
 
-# Pin Mapping:
+# Pin Mapping and Buton/Led Definitions:
+
+Pin mapping and button/led definitions can be seen on the table below.
 
 ![SFB1_Pinmap](images/SudoFlex-Basic-1_rev2_pinmap.png)
+
+| Abbreviation | Description |
+| :---        |    :----   |
+| DIx | Digital Input pins |
+| DOx | Digital Output pins |
+| PWMIx | PWM Input pins |
+| PWMOx | PWM Output pins |
+| ENCx | Incremental Encoder Input pins | 
+| AIx | Analog Input pins |
+| AOx | Analog Output pins |
+| MODBUS_xx | Modbus RTU pins |
+| SYNC (26) | Synchronization pin. This pin goes high at the start of       sampling and stays high during algorithm execution. So signal frequency is equal to sampling frequency and signal pulse width shows the algorithm execution time. |
+| STA (27) | If algorithm execution time exceeds sampling period this pin goes high. It is also connected to STA led. |
+| TX, RX (28, 29) | UART Programming Interface pins for SudoFlex-Basic |
+| GND (30) | Ground pin for SudoFlex-Basic |
+| 3.3V (31) | Power pin for SudoFlex-Basic. Applied voltage must not exceed 3.3V and should be regulated. |
+| RFS | Return to factory settings button. If this button is pressed during reset, board clears the saved algorithm and returns to default algorithm string. |
+| RST | Reset button |
+| LoopSW | Loop on-off switch |
+| PWR | Power led |
+| STA | Status led. This led turns on if sampling frequency is too high for the current algorithm execution or sampling frequency is zero. |
 
 # SudoFlex-Configurator:
 
