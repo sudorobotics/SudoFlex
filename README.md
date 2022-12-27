@@ -97,14 +97,14 @@ SudoFlex-Configurator is a desktop GUI application used for developing control a
 ![alt text](images/SudoFlex-Configurator.png)
 
 SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. Latest version is 1.0.0. Under **Releases** section, there are 3 application files:
-* .exe: Setup file for Windows installation.
-* .zip: Windows unpacked application file for users that want to use the application without installation.
-* .AppImage: Linux application file
+* SudoFlex-Configurator.Setup.1.x.x.exe: Setup file for Windows installation.
+* SudoFlex-Configurator.1.x.x.exe: Portable Windows application file for users that want to use the application without installation.
+* SudoFlex-Configurator-1.x.x.AppImage: Linux application file
 
 ## Notes for Windows:
 
-* You can use .exe setup file for installing SudoFlex-Configurator as a regular Windows desktop application. SudoFlex-Configurator is a self-signed application. Therefore, Windows may try to block installation by Smart Screen. You can continue installation by clicking "**More info**" text.
-* If you don't want to install SudoFlex-Configurator, you can use the unpacked .zip file. This file includes SudoFlex-Configurator in a single folder. You can directly run the application by running the .exe file in the folder. Unfortunately again, Smart Screen may block you running the application.
+* You can use setup file for installing SudoFlex-Configurator as a regular Windows desktop application. SudoFlex-Configurator is a self-signed application. Therefore, Windows may try to block installation by Smart Screen. You can continue installation by clicking "**More info**" text.
+* If you don't want to install SudoFlex-Configurator, you can use the portable application file. You can directly run the application by running this file. Unfortunately again, Smart Screen may block you running the application.
 
 ## Notes for Linux:
 
