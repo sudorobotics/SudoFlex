@@ -10,57 +10,56 @@ SudoFlex project aims to create a board family for digital control applications.
 
 Control algorithms for the board are developed by built-in blocks and block connections. There are 94 blocks for different functions. A summary of the blocks can be found below.
 
-* 4 Type Conversion Blocks: F32_U32, U32_F32, F32_S32, S32_F32
-* 4 Float Check Blocks: ISNAN, ISINF, ISFINITE, ISNORMAL
-* 4 Rounding Blocks: CEIL, FLOOR, TRUNC, ROUND
-* 15 Numerical Blocks: SQRT, CBRT, LN, LOG, LOG2, EXP, EXP2, SIN, COS, TAN,
-ASIN, ACOS, ATAN, ATAN2, ABS
-* 14 Arithmetic Blocks: ADD, MUL, ADDC, MULC, SUB, DIV, MOD, FMOD,
-REMAINDER, EXPT, HYPOT,
-  * SMA: Simple Moving Average
-  * CMA: Cumulative Moving Average
-  * EMA: Exponential Moving Average
-* 8 Bitwise Operation Blocks: SHL, SHR, ROL, ROR, BITAND, BITOR, BITXOR,
-BITNOT
-* 5 Selection Blocks: MAX, MIN, LIMIT, SEL, MUX
-* 6 Comparison Blocks: GT, GE, LT, LE, EQ, NE
-* 6 Logic Blocks: NOT, AND, OR, XOR, ANDBFOR, ORBFAND
+* 4 Type Conversion Blocks: **F32_U32, U32_F32, F32_S32, S32_F32**
+* 4 Float Check Blocks: **ISNAN, ISINF, ISFINITE, ISNORMAL**
+* 4 Rounding Blocks: **CEIL, FLOOR, TRUNC, ROUND**
+* 15 Numerical Blocks: **SQRT, CBRT, LN, LOG, LOG2, EXP, EXP2, SIN, COS, TAN, ASIN, ACOS, ATAN, ATAN2, ABS**
+* 14 Arithmetic Blocks: **ADD, MUL, ADDC, MULC, SUB, DIV, MOD, FMOD,
+REMAINDER, EXPT, HYPOT**
+  * **SMA**: Simple Moving Average
+  * **CMA**: Cumulative Moving Average
+  * **EMA**: Exponential Moving Average
+* 8 Bitwise Operation Blocks: **SHL, SHR, ROL, ROR, BITAND, BITOR, BITXOR,
+BITNOT**
+* 5 Selection Blocks: **MAX, MIN, LIMIT, SEL, MUX**
+* 6 Comparison Blocks: **GT, GE, LT, LE, EQ, NE**
+* 6 Logic Blocks: **NOT, AND, OR, XOR, ANDBFOR, ORBFAND**
 * 2 Flip-flop Blocks:
-  * SR: Set dominant flip-flop
-  * RS: Reset dominant flip-flop
+  * **SR**: Set dominant flip-flop
+  * **RS**: Reset dominant flip-flop
 * 2 Edge Detection Blocks:
-  * R_TRIG: Rising edge detection
-  * F_TRIG: Falling edge detection
+  * **R_TRIG**: Rising edge detection
+  * **F_TRIG**: Falling edge detection
 * 3 Counter Blocks:
-  * CTU: Up counter
-  * CTD: Down Counter
-  * CTUD: Up-down counter
+  * **CTU**: Up counter
+  * **CTD**: Down Counter
+  * **CTUD**: Up-down counter
 * 3 Timer Blocks:
-  * TON: On-delay timer
-  * TOF: Off-delay timer
-  * TP: Pulse timer
+  * **TON**: On-delay timer
+  * **TOF**: Off-delay timer
+  * **TP**: Pulse timer
 * 6 I/O Blocks:
-  * DI: Digital input
-  * DO: Digital output
-  * PWMO: PWM output
-  * PWMI: PWM input
-  * ENC: Incremental encoder input
-  * AI: Analog input
+  * **DI**: Digital input
+  * **DO**: Digital output
+  * **PWMO**: PWM output
+  * **PWMI**: PWM input
+  * **ENC**: Incremental encoder input
+  * **AI**: Analog input
 * 5 Source Blocks:
-  * CONST: Constant numbers
-  * CAPTURE: Captures input values when triggered
-  * TIME: Provides time value in terms of sampling period
-  * WAVE: Generates custom defined wave
-  * PULSE: Pulse generator. Useful for step motor driving.
+  * **CONST**: Constant numbers
+  * **CAPTURE**: Captures input values when triggered
+  * **TIME**: Provides time value in terms of sampling period
+  * **WAVE**: Generates custom defined wave
+  * **PULSE**: Pulse generator. Useful for step motor driving.
 * 5 Control Blocks:
-  * UDELAY: Unit delay, delays input for one sampling period
-  * TFD_1: First-order discrete transfer function
-  * TFD_2 Second order discrete transfer function
-  * TFD_3: Third-order discrete transfer function
-  * PID: PID controller with anti-windup and derivative filter
+  * **UDELAY**: Unit delay, delays input for one sampling period
+  * **TFD_1**: First-order discrete transfer function
+  * **TFD_2**: Second order discrete transfer function
+  * **TFD_3**: Third-order discrete transfer function
+  * **PID**: PID controller with anti-windup and derivative filter
 * 1 Connectivity Block:
-  * MODBUS_RTU: Modbus RTU communication
-* Other Blocks: PAUSE
+  * **MODBUS_RTU**: Modbus RTU communication
+* Other Blocks: **PAUSE**
 
 For a detailed reference information about SFB1 you can refer to the user manual in pdf format. Latest user manual can be found under **Releases** section.
 
