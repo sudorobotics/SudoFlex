@@ -96,10 +96,19 @@ SudoFlex-Configurator is a desktop GUI application used for developing control a
 
 ![alt text](images/SudoFlex-Configurator.png)
 
-SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. Dedicated installers -exe for Windows and AppImage for Linux- for the latest release(1.0.0) can be found under the **Releases** section.
+SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. Latest version is 1.0.0. Under **Releases** section, there are 3 application files:
+* .exe: Setup file for Windows installation.
+* .zip: Windows unpacked application file for users that want to use the application without installation.
+* .AppImage: Linux application file
 
-## Notes for Installation:
-* SudoFlex-Configurator is a self-signed application. Therefore, Windows may try to block installation by Smart Screen. You can continue installation by clicking "**More info**" text.
+## Notes for Windows:
+
+* You can use .exe setup file for installing SudoFlex-Configurator as a regular Windows desktop application. SudoFlex-Configurator is a self-signed application. Therefore, Windows may try to block installation by Smart Screen. You can continue installation by clicking "**More info**" text.
+* If you don't want to install SudoFlex-Configurator, you can use the unpacked .zip file. This file includes SudoFlex-Configurator in a single folder. You can directly run the application by running the .exe file in the folder. Unfortunately again, Smart Screen may block you running the application.
+
+## Notes for Linux:
+
+* .AppImage file is the self-contained application file for Linux. You can directly download this file, make it executable, and run the application in Linux.
 * SudoFlex-Configurator needs a serial port connection to communicate with the board. Therefore, you need to add the user to the "**dialout**" group under Linux. Following command can be used for this purpose:
   ```bash
   sudo usermod -a -G dialout <username>
