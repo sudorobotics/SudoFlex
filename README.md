@@ -19,7 +19,6 @@ ASIN, ACOS, ATAN, ATAN2, ABS
 REMAINDER, EXPT, HYPOT,
   * SMA: Simple Moving Average
   * CMA: Cumulative Moving Average
-Rev 1 3/25
   * EMA: Exponential Moving Average
 * 8 Bitwise Operation Blocks: SHL, SHR, ROL, ROR, BITAND, BITOR, BITXOR,
 BITNOT
