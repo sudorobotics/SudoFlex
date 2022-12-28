@@ -61,7 +61,7 @@ BITNOT**
   * **MODBUS_RTU**: Modbus RTU communication
 * Other Blocks: **PAUSE**
 
-For a detailed reference information about SFB1 you can refer to the user manual in pdf format. Latest user manual can be found under **Releases** section.
+For a detailed reference information about SFB1 you can refer to the user manual in pdf format. Latest user manual can be found under [Releases](https://github.com/sudorobotics/SudoFlex/releases) section.
 
 # Pin Mapping and Buton/Led Definitions:
 
@@ -96,7 +96,7 @@ SudoFlex-Configurator is a desktop GUI application used for developing control a
 
 ![alt text](images/SudoFlex-Configurator.png)
 
-SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. Latest version is 1.0.0. Under **Releases** section, there are 3 application files:
+SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. Latest version is 1.0.0. Under [Releases](https://github.com/sudorobotics/SudoFlex/releases) section, there are 3 application files:
 * SudoFlex-Configurator.Setup.1.x.x.exe: Setup file for Windows installation.
 * SudoFlex-Configurator.1.x.x.exe: Portable Windows application file for users that want to use the application without installation.
 * SudoFlex-Configurator-1.x.x.AppImage: Linux application file
