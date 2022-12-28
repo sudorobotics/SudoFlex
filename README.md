@@ -96,7 +96,7 @@ SudoFlex-Configurator is a desktop GUI application used for developing control a
 
 ![alt text](images/SudoFlex-Configurator.png)
 
-SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. Latest version is 1.0.0. Under [Releases](https://github.com/sudorobotics/SudoFlex/releases) section, there are 3 application files:
+SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. Under [Releases](https://github.com/sudorobotics/SudoFlex/releases) section, there are 3 application files:
 * SudoFlex-Configurator.Setup.1.x.x.exe: Setup file for Windows installation.
 * SudoFlex-Configurator.1.x.x.exe: Portable Windows application file for users that want to use the application without installation.
 * SudoFlex-Configurator-1.x.x.AppImage: Linux application file
