@@ -136,22 +136,29 @@ SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. 
 # Examples
 
 ## 1-Led blink
-![1_LedBlink](res/1_LedBlink_bb.png) 
+![1_LedBlink_bb](res/1_LedBlink_bb.png) 
+![1_LedBlink_SC](res/1_LedBlink_SC.png) 
 
 ## 2-Button/led interface with DI and DO
-![2_ButtonLed](res/2_ButtonLed_bb.png) 
+![2_ButtonLed_bb](res/2_ButtonLed_bb.png) 
+![2_ButtonLed_SC](res/2_ButtonLed_SC.png)
 
 ## 3-MODBUS_RTU
-![3_Modbus](res/3_MODBUS_bb.png)
+![3_Modbus_bb](res/3_MODBUS_bb.png)
+![3_Modbus_SC](res/3_MODBUS_SC.png)
 
 ## 4-Analog input with AI
-![4_AI](res/4_AI_bb.png)
+![4_AI_bb](res/4_AI_bb.png)
+![4_AI_SC](res/4_AI_SC.png)
 
 ## 5-Incremental encoder input with ENC
-![5_ENC](res/5_ENC_bb.png)
+![5_ENC_bb](res/5_ENC_bb.png)
+![5_ENC_SC](res/5_ENC_SC.png)
 
 ## 6-Measuring duty-cycle, pulse-width, and frequency of a signal by PWMI
-![6_PWMI](res/6_PWMI_bb.png)
+![6_PWMI_bb](res/6_PWMI_bb.png)
+![6_PWMI_SC](res/6_PWMI_SC.png)
 
 ## 7-Generating PWM signal with PWMO
-![7_PWMO](res/7_PWMO_bb.png)
+![7_PWMO_bb](res/7_PWMO_bb.png)
+![7_PWMO_SC](res/7_PWMO_SC.png)
