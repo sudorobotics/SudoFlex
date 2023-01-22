@@ -2,13 +2,21 @@
 
 # Table of Contents:
 - [Introduction](#introduction)
-- [Pin Mapping and Button/Led Definitions](#pin-mapping-and-buttonled-definitions)
-- [Minimum Connections](#minimum-connections)
+- [Pin mapping and button/led definitions](#pin-mapping-and-buttonled-definitions)
+- [Minimum connections](#minimum-connections)
 - [SudoFlex-Configurator](#sudoflex-configurator)
   - [Notes for Windows users](#notes-for-windows-users)
   - [Notes for Linux users](#notes-for-linux-users)
+- [Examples](#examples)
+  - [1-Led blink](#1-led-blink)
+  - [2-Button/led interface with DI and DO](#2-buttonled-interface-with-di-and-do)
+  - [3-MODBUS_RTU](#3-modbus_rtu)
+  - [4-Analog input with AI](#4-analog-input-with-ai)
+  - [5-Incremental Encoder Input with ENC](#5-incremental-encoder-input-with-enc)
+  - [6-Measuring duty-cycle, pulse-width, and frequency of a signal by PWMI](#6-measuring-duty-cycle-pulse-width-and-frequency-of-a-signal-by-pwmi)
+  - [7-Generating PWM signal with PWMO](#7-generating-pwm-signal-with-pwmo)
 
-# Introduction:
+# Introduction
 SudoFlex project aims to create a board family for digital control applications. SFB1 board is the first step of the project and the only available board in the market for now. This repository includes all necessary information and resources to start to use SFB1. Front and back views of the board are shown below.
 
 |Front|Back|
@@ -70,7 +78,7 @@ BITNOT**
 
 For a detailed reference information about SFB1 you can refer to the user manual in pdf format. Latest user manual can be found under [Releases](https://github.com/sudorobotics/SudoFlex/releases) section.
 
-# Pin Mapping and Button/Led Definitions:
+# Pin Mapping and Button/Led Definitions
 Pin mapping and button/led definitions can be seen on the table below.
 
 ![SFB1_Pinmap](res/SudoFlex-Basic-1_rev2_pinmap.png)
@@ -87,21 +95,21 @@ Pin mapping and button/led definitions can be seen on the table below.
 | MODBUS_xx | Modbus RTU pins |
 | SYNC (26) | Synchronization pin. This pin goes high at the start of       sampling and stays high during algorithm execution. So signal frequency is equal to sampling frequency and signal pulse width shows the algorithm execution time. |
 | STA (27) | If algorithm execution time exceeds sampling period this pin goes high. It is also connected to STA led. |
-| TX, RX (28, 29) | UART Programming Interface pins for SudoFlex-Basic |
-| GND (30) | Ground pin for SudoFlex-Basic |
-| 3.3V (31) | Power pin for SudoFlex-Basic. Applied voltage must not exceed 3.3V and should be regulated. |
+| TX, RX (28, 29) | UART Programming Interface pins for SFB1 |
+| GND (30) | Ground pin for SFB1 |
+| 3.3V (31) | Power pin for SFB1. Applied voltage must not exceed 3.3V and should be regulated. |
 | RFS | Return to factory settings button. If this button is pressed during reset, board clears the saved algorithm and returns to default algorithm string. |
 | RST | Reset button |
 | LoopSW | Loop on-off switch |
 | PWR | Power led |
 | STA | Status led. This led turns on if sampling frequency is too high for the current algorithm execution or sampling frequency is zero. |
 
-# Minimum Connections:
-In order to start developing with SudoFlex board, one has to make minimum connections as shown on the figure below. First, regulated 3.3V power must be supplied to the board. Second, a UART-USB converter board should be connected to the SudoFlex board to make a programming and logging interface connection with SudoFlex-Configurator running on the computer. UART-USB converter boards are common in the market and can be obtained easily at reasonable prices. Both FTDI and CH340 based boards are perfectly convenient, however CH340 based boards may need driver installation.
+# Minimum Connections
+In order to start developing with SFB1 board, one has to make minimum connections as shown on the figure below. First, regulated 3.3V power must be supplied to the board. Second, a UART-USB converter board should be connected to the SFB1 board to make a programming and logging interface connection with SudoFlex-Configurator running on the computer. UART-USB converter boards are common in the market and can be obtained easily at reasonable prices. Both FTDI and CH340 based boards are perfectly convenient, however CH340 based boards may need driver installation.
 
 ![Minimum-connections](res/0_MinimumConnections_bb.png)
 
-# SudoFlex-Configurator:
+# SudoFlex-Configurator
 SudoFlex-Configurator is a desktop GUI application used for developing control algorithms. It has also a serial interface that can be used for downloading generated algorithms to the board and tracing log messages. A screenshot of the application can be seen on the figure below.
 
 ![SudoFlex-Configurator](res/SudoFlex-Configurator.png)
@@ -111,11 +119,11 @@ SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. 
 * SudoFlex-Configurator.1.x.x.exe: Portable Windows application file for users that want to use the application without installation.
 * SudoFlex-Configurator-1.x.x.AppImage: Linux application file
 
-## Notes for Windows users:
+## Notes for Windows users
 * You can use setup file for installing SudoFlex-Configurator as a regular Windows desktop application. SudoFlex-Configurator is a self-signed application. Therefore, Windows may try to block installation by Smart Screen. You can continue installation by clicking "**More info**" text.
 * If you don't want to install SudoFlex-Configurator, you can use the portable application file. You can directly run the application by running this file. Unfortunately again, Smart Screen may block you running the application.
 
-## Notes for Linux users:
+## Notes for Linux users
 * .AppImage file is the self-contained application file for Linux. You can directly download this file, make it executable, and run the application in Linux.
 * SudoFlex-Configurator needs a serial port connection to communicate with the board. Therefore, you need to add the user to the "**dialout**" group under Linux. Following command can be used for this purpose:
   ```bash
@@ -125,4 +133,54 @@ SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. 
   ```bash
   sudo chmod a+rw /dev/ttyUSB0
   ```
+# Examples
+7 introductory examples are prepared for a gentle introduction to SFB1. Json files of the examples can be found under the "examples" folder. These examples demonstrate the basic I/O and communication features of SFB1. After this introduction, SFB1 user manual should be used for detailed information about other blocks board features.
 
+## 1-Led blink
+In this example, a led blinks at sampling frequency. DO block is used to drive the led which is connceted to pin-0 (DO0). NOT block is used to toggle the led state.
+
+![1_LedBlink_bb](res/1_LedBlink_bb.png)
+
+![1_LedBlink_SC](res/1_LedBlink_SC.png) 
+
+## 2-Button/led interface with DI and DO
+In this example, a led turns on when the button is pressed and turns off when the button is released. DO block is used to drive the led which is connected to pin-0(DO0). DI block is used to read the button state where the button is connected to pin-9(DI9).
+
+![2_ButtonLed_bb](res/2_ButtonLed_bb.png) 
+
+![2_ButtonLed_SC](res/2_ButtonLed_SC.png)
+
+## 3-MODBUS_RTU
+SFB1 implements Modbus-RTU slave protocol. MODBUS_RTU block can be used to enable this feature. This block has many settings by which one can configure all communication and register structure settings for application needs. Signals in SFB1 are 32-bit wide. Therefore each signal occupies 2 Modbus registers. In this example, a button' s state is read by a DI block and a led is driven by a DO block. DI block is connected to "input signal" input of the MODBUS_RTU block. Holding signal output of the MODBUS_RTU block is connected to DO block. By using a PC Modbus-Master application (Like [Modbus Poll](https://www.modbustools.com/), [Radzio](https://en.radzio.dxp.pl/modbus-master-simulator)) button state can be read and led state can be set over Modbus.
+
+![3_Modbus_bb](res/3_MODBUS_bb.png)
+
+![3_Modbus_SC](res/3_MODBUS_SC.png)
+
+## 4-Analog input with AI
+SFB1 has 10 analog input channels. In this example, a potentiometer is used to create a varying analog signal. This signal is read by AI block over AI0. Also, MODBUS_RTU block is used to analog to digital coversion result.
+
+![4_AI_bb](res/4_AI_bb.png)
+
+![4_AI_SC](res/4_AI_SC.png)
+
+## 5-Incremental encoder input with ENC
+SFB1 has two encoder channels. In this example, an incremental encoder reaiding is obtained by ENC block and sent over Modbus.
+
+![5_ENC_bb](res/5_ENC_bb.png)
+
+![5_ENC_SC](res/5_ENC_SC.png)
+
+## 6-Measuring duty-cycle, pulse-width, and frequency of a signal by PWMI
+Some useful data of a signal like duty-cycle, pulse-width, frequency can be read in real-time by a PWMI block. In this example, a signal is generated by a signal generator and fed to PWMI0 channel of SFB1. Again, obtained data can be traced over Modbus. 
+
+![6_PWMI_bb](res/6_PWMI_bb.png)
+
+![6_PWMI_SC](res/6_PWMI_SC.png)
+
+## 7-Generating PWM signal with PWMO
+PWMO block is used to generate PWM signals. By block settings, one can set duty-cycle or pulse-width or frequency of the generated signal. This example demonstrates these three cases. 3 signals generated ove PWMO2, PWMO4, PWMO5 channels. You can set duty-cycle of the signal over PWMO2, pulse-width of the signal over PWMO4, and frequency of the signal over PWMO5 via Modbus. A logic analyzer or oscilloscope can be used trace the signal properties.
+
+![7_PWMO_bb](res/7_PWMO_bb.png)
+
+![7_PWMO_SC](res/7_PWMO_SC.png)
