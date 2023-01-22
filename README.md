@@ -134,6 +134,7 @@ SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. 
   sudo chmod a+rw /dev/ttyUSB0
   ```
 # Examples
+7 introductory examples are prepared for a gentle introduction to SFB1. Json files of the examples can be found under the "examples" folder. These examples demonstrate the basic I/O and communication features of SFB1. After this introduction, SFB1 user manual should be used for detailed information about other blocks board features.
 
 ## 1-Led blink
 In this example, a led blinks at sampling frequency. DO block is used to drive the led which is connceted to pin-0 (DO0). NOT block is used to toggle the led state.
@@ -178,7 +179,7 @@ Some useful data of a signal like duty-cycle, pulse-width, frequency can be read
 ![6_PWMI_SC](res/6_PWMI_SC.png)
 
 ## 7-Generating PWM signal with PWMO
-PWMO block is used to generate PWM signals. By block settings, one can set duty-cycle or pulse-width or frequency of the generated signal. This example demonstrates these three cases. 3 signals generated ove PWMO2, PWMO4, PWMO5 channels. You can set duty-cycle of the signal over PWMO2, pulse-width of the signal over PWMO4, and frequency of the signal over PWMO5 via Modbus. 
+PWMO block is used to generate PWM signals. By block settings, one can set duty-cycle or pulse-width or frequency of the generated signal. This example demonstrates these three cases. 3 signals generated ove PWMO2, PWMO4, PWMO5 channels. You can set duty-cycle of the signal over PWMO2, pulse-width of the signal over PWMO4, and frequency of the signal over PWMO5 via Modbus. A logic analyzer or oscilloscope can be used trace the signal properties.
 
 ![7_PWMO_bb](res/7_PWMO_bb.png)
 
