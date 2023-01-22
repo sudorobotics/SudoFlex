@@ -1,12 +1,19 @@
 # SudoFlex-Basic-1 (SFB1) Digital Control Board
 
-# Introduction:
+# Table of Contents:
+- [Introduction](#introduction)
+- [Pin Mapping and Button/Led Definitions](#pin-mapping-and-buttonled-definitions)
+- [Minimum Connections](#minimum-connections)
+- [SudoFlex-Configurator](#sudoflex-configurator)
+  - [Notes for Windows users](#notes-for-windows-users)
+  - [Notes for Linux users](#notes-for-linux-users)
 
+# Introduction:
 SudoFlex project aims to create a board family for digital control applications. SFB1 board is the first step of the project and the only available board in the market for now. This repository includes all necessary information and resources to start to use SFB1. Front and back views of the board are shown below.
 
 |Front|Back|
 |:-:|:-:|
-| ![SFB1_Front](images/SFB1_Front.png) | ![SFB1_Back](images/SFB1_Back.png) |
+| ![SFB1_Front](res/SFB1_Front.png) | ![SFB1_Back](res/SFB1_Back.png) |
 
 Control algorithms for the board are developed by built-in blocks and block connections. There are 94 blocks for different functions. A summary of the blocks can be found below.
 
@@ -63,11 +70,10 @@ BITNOT**
 
 For a detailed reference information about SFB1 you can refer to the user manual in pdf format. Latest user manual can be found under [Releases](https://github.com/sudorobotics/SudoFlex/releases) section.
 
-# Pin Mapping and Buton/Led Definitions:
-
+# Pin Mapping and Button/Led Definitions:
 Pin mapping and button/led definitions can be seen on the table below.
 
-![SFB1_Pinmap](images/SudoFlex-Basic-1_rev2_pinmap.png)
+![SFB1_Pinmap](res/SudoFlex-Basic-1_rev2_pinmap.png)
 
 | Abbreviation | Description |
 | :---        |    :----   |
@@ -90,24 +96,26 @@ Pin mapping and button/led definitions can be seen on the table below.
 | PWR | Power led |
 | STA | Status led. This led turns on if sampling frequency is too high for the current algorithm execution or sampling frequency is zero. |
 
-# SudoFlex-Configurator:
+# Minimum Connections:
+In order to start developing with SudoFlex board, one has to make minimum connections as shown on the figure below. First, regulated 3.3V power must be supplied to the board. Second, a UART-USB converter board should be connected to the SudoFlex board to make a programming and logging interface connection with SudoFlex-Configurator running on the computer. UART-USB converter boards are common in the market and can be obtained easily at reasonable prices. Both FTDI and CH340 based boards are perfectly convenient, however CH340 based boards may need driver installation.
 
+![Minimum-connections](res/0_MinimumConnections_bb.png)
+
+# SudoFlex-Configurator:
 SudoFlex-Configurator is a desktop GUI application used for developing control algorithms. It has also a serial interface that can be used for downloading generated algorithms to the board and tracing log messages. A screenshot of the application can be seen on the figure below.
 
-![alt text](images/SudoFlex-Configurator.png)
+![SudoFlex-Configurator](res/SudoFlex-Configurator.png)
 
 SudoFlex-Configurator only works on 64-bit Windows and Linux platforms for now. Under [Releases](https://github.com/sudorobotics/SudoFlex/releases) section, there are 3 application files:
 * SudoFlex-Configurator.Setup.1.x.x.exe: Setup file for Windows installation.
 * SudoFlex-Configurator.1.x.x.exe: Portable Windows application file for users that want to use the application without installation.
 * SudoFlex-Configurator-1.x.x.AppImage: Linux application file
 
-## Notes for Windows:
-
+## Notes for Windows users:
 * You can use setup file for installing SudoFlex-Configurator as a regular Windows desktop application. SudoFlex-Configurator is a self-signed application. Therefore, Windows may try to block installation by Smart Screen. You can continue installation by clicking "**More info**" text.
 * If you don't want to install SudoFlex-Configurator, you can use the portable application file. You can directly run the application by running this file. Unfortunately again, Smart Screen may block you running the application.
 
-## Notes for Linux:
-
+## Notes for Linux users:
 * .AppImage file is the self-contained application file for Linux. You can directly download this file, make it executable, and run the application in Linux.
 * SudoFlex-Configurator needs a serial port connection to communicate with the board. Therefore, you need to add the user to the "**dialout**" group under Linux. Following command can be used for this purpose:
   ```bash
